@@ -1,0 +1,13 @@
+[template]
+src = "fedora/fedora-logback.xml.tpl"
+dest = "/usr/local/fedora/server/config/logback.xml"
+uid = 1000
+gid = 1000
+mode = "0740"
+keys = [
+  "/fedora/org/fcrepo/log",
+  "/fedora/org/apache/cxf/log",
+  "/fedora/org/fcrepo/server/security/jaas/log",
+  "/fedora/org/fcrepo/server/security/xacml/log",
+  "/fedora/root/log"
+]

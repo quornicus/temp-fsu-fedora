@@ -1,0 +1,13 @@
+[template]
+src = "gsearch/log4j.xml.tpl"
+dest = "/usr/local/tomcat/webapps/fedoragsearch/WEB-INF/classes/log4j.xml"
+uid = 1000
+gid = 1000
+mode = "0740"
+keys = [
+  "/gsearch/dk/defxws/fedoragsearch/log",
+  "/gsearch/dk/defxws/fgszebra/log",
+  "/gsearch/dk/defxws/fgslucene/log",
+  "/gsearch/dk/defxws/fgssolr/log",
+  "/gsearch/root/log"
+]

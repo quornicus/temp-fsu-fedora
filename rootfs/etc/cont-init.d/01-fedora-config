@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv sh
+
+# Wait for SQL.
+while ! mysqladmin ping -h${DB_ENDPOINT} --silent; do
+    sleep 1
+done
+
+/usr/local/bin/confd -onetime -backend env
+
+if [ $FEDORA_RESOURCE_INDEX = "mulgara" ]; then
+   mv /usr/local/fedora/server/config/spring/remote-blazegraph.xml /usr/local/fedora/server/config/spring/remote-blazegraph.bk
+fi
